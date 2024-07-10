@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docs on TCmatj的个人博客</title>
+    <link>https://TCmatj.github.io/docs/</link>
+    <description>Recent content in Docs on TCmatj的个人博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2024 TCmatj</copyright>
+    <atom:link href="https://TCmatj.github.io/docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker</title>
+      <link>https://TCmatj.github.io/docs/%E5%B7%A5%E5%85%B7/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://TCmatj.github.io/docs/%E5%B7%A5%E5%85%B7/docker/</guid>
+      <description>Docker 基础 # 配置镜像加速 # # 编辑 Docker 配置文件 $ sudo vim /etc/docker/daemon.json # 加入以下配置</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://TCmatj.github.io/docs/%E5%B7%A5%E5%85%B7/docker/featured.png" />
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://TCmatj.github.io/docs/%E5%B7%A5%E5%85%B7/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://TCmatj.github.io/docs/%E5%B7%A5%E5%85%B7/git/</guid>
+      <description>分布式版本控制系统 1. 命令 # 1.1 安装后配置 # git -v 查看git版本 git</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://TCmatj.github.io/docs/%E5%B7%A5%E5%85%B7/git/featured.png" />
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>https://TCmatj.github.io/docs/java/java%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://TCmatj.github.io/docs/java/java%E5%9F%BA%E7%A1%80/</guid>
+      <description>1.类的初始化执行顺序 # 对所有字段赋默认值 静态语句、静态代码</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://TCmatj.github.io/docs/java/java%E5%9F%BA%E7%A1%80/featured.png" />
+    </item>
+    
+    <item>
+      <title>JUC</title>
+      <link>https://TCmatj.github.io/docs/java/juc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://TCmatj.github.io/docs/java/juc/</guid>
+      <description>1.线程的基本操作 # Java 线程主流实现是使用内核线程 1:1 实现，每个</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://TCmatj.github.io/docs/java/juc/featured.png" />
+    </item>
+    
+    <item>
+      <title>JVM</title>
+      <link>https://TCmatj.github.io/docs/java/jvm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://TCmatj.github.io/docs/java/jvm/</guid>
+      <description>https://juejin.cn/post/7094121178373029895 三大核心功能：内存管理、解释执行虚拟机指令、即时编译 一、组</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://TCmatj.github.io/docs/java/jvm/featured.png" />
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://TCmatj.github.io/docs/%E5%B7%A5%E5%85%B7/linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://TCmatj.github.io/docs/%E5%B7%A5%E5%85%B7/linux/</guid>
+      <description>一、网络 # 1. 固定IP地址 # /etc/dhcpd.conf 文件 interface wlan0 static ip_address=192.168.1.110/24 # ip和子网掩码（可</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://TCmatj.github.io/docs/%E5%B7%A5%E5%85%B7/linux/featured.png" />
+    </item>
+    
+    <item>
+      <title>Lua脚本</title>
+      <link>https://TCmatj.github.io/docs/redis/lua/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://TCmatj.github.io/docs/redis/lua/</guid>
+      <description>1. 基本使用 # 类型 备注 nil 空 boolean 布尔值 number 数字 string 字符串 table 表 x = 123 -- 全</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://TCmatj.github.io/docs/redis/lua/featured.png" />
+    </item>
+    
+    <item>
+      <title>Maven</title>
+      <link>https://TCmatj.github.io/docs/%E5%B7%A5%E5%85%B7/maven/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://TCmatj.github.io/docs/%E5%B7%A5%E5%85%B7/maven/</guid>
+      <description>1.作用 # 依赖管理 统一项目结构 项目构建 2.安装 # 下载 zip 文件 配</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://TCmatj.github.io/docs/%E5%B7%A5%E5%85%B7/maven/featured.png" />
+    </item>
+    
+    <item>
+      <title>Mybatis</title>
+      <link>https://TCmatj.github.io/docs/mysql/mybatis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://TCmatj.github.io/docs/mysql/mybatis/</guid>
+      <description>传统JDBC流程： 1、使用JDBC编程需要链接数据库，注册驱</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://TCmatj.github.io/docs/mysql/mybatis/featured.png" />
+    </item>
+    
+    <item>
+      <title>MySQL语法</title>
+      <link>https://TCmatj.github.io/docs/mysql/mysql%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://TCmatj.github.io/docs/mysql/mysql%E8%AF%AD%E6%B3%95/</guid>
+      <description>1. 连接数据库 # 创建用户 create user &#39;tc2023&#39; identified by &#39;1234&#39;; 授权所有权限： GRANT ALL PRIVILEGES ON tlias.* TO</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://TCmatj.github.io/docs/mysql/mysql%E8%AF%AD%E6%B3%95/featured.png" />
+    </item>
+    
+    <item>
+      <title>MySQL原理</title>
+      <link>https://TCmatj.github.io/docs/mysql/mysql%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://TCmatj.github.io/docs/mysql/mysql%E5%8E%9F%E7%90%86/</guid>
+      <description>1. 索引 # 1.1 索引选择 # 1.1.1 哈希 # 使用哈希算法实现的索引虽然可以做</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://TCmatj.github.io/docs/mysql/mysql%E5%8E%9F%E7%90%86/featured.png" />
+    </item>
+    
+    <item>
+      <title>Python入门</title>
+      <link>https://TCmatj.github.io/docs/python/python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://TCmatj.github.io/docs/python/python/</guid>
+      <description>1、方法与函数的区别 # 方法作用于对象，函数大多需要传入参数 方</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://TCmatj.github.io/docs/python/python/featured.png" />
+    </item>
+    
+    <item>
+      <title>Redis入门与原理</title>
+      <link>https://TCmatj.github.io/docs/redis/redis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://TCmatj.github.io/docs/redis/redis/</guid>
+      <description>Redis入门 # SQL与NoSQL区别 SQL NoSQL 数据结构 结构化 非结</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://TCmatj.github.io/docs/redis/redis/featured.png" />
+    </item>
+    
+    <item>
+      <title>Redis使用</title>
+      <link>https://TCmatj.github.io/docs/redis/redis%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://TCmatj.github.io/docs/redis/redis%E4%BD%BF%E7%94%A8/</guid>
+      <description>1.快速入门 # 引入依赖 &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;redis.clients&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;jedis&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.7.0&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; 建立连接 private Jedis jedis; @BeforeEach void setUp(){ // 建立连</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://TCmatj.github.io/docs/redis/redis%E4%BD%BF%E7%94%A8/featured.png" />
+    </item>
+    
+    <item>
+      <title>Spring Boot</title>
+      <link>https://TCmatj.github.io/docs/java/springboot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://TCmatj.github.io/docs/java/springboot/</guid>
+      <description>Spring Boot # 简化 Spring 框架开发 [toc] 1. 创建项目 # 勾选 Web --&amp;gt; Spring Web 2. 注解 # @SpringBootApplication 标注</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://TCmatj.github.io/docs/java/springboot/featured.png" />
+    </item>
+    
+    <item>
+      <title>Stream、IO流</title>
+      <link>https://TCmatj.github.io/docs/java/stream%E6%B5%81%E4%B8%8Eio%E6%B5%81/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://TCmatj.github.io/docs/java/stream%E6%B5%81%E4%B8%8Eio%E6%B5%81/</guid>
+      <description>1. Stream 流式编程 # Stream 对象是一种一次性使用的对象，它只能被消费一次</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://TCmatj.github.io/docs/java/stream%E6%B5%81%E4%B8%8Eio%E6%B5%81/featured.png" />
+    </item>
+    
+    <item>
+      <title>机器学习</title>
+      <link>https://TCmatj.github.io/docs/python/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://TCmatj.github.io/docs/python/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
+      <description>1、数据处理 # 1、缺失值 # is_NaN = iris_df_NaN.isna() # 判断 Pandas 数据帧是否为缺失值，</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://TCmatj.github.io/docs/python/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/featured.png" />
+    </item>
+    
+    <item>
+      <title>设计模式</title>
+      <link>https://TCmatj.github.io/docs/%E5%85%B6%E4%BB%96/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://TCmatj.github.io/docs/%E5%85%B6%E4%BB%96/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
+      <description>创建性设计模式 # 一、单例模式 # 一个类只允许创建一个对象（或者</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://TCmatj.github.io/docs/%E5%85%B6%E4%BB%96/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/featured.png" />
+    </item>
+    
+    <item>
+      <title>深度学习</title>
+      <link>https://TCmatj.github.io/docs/python/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://TCmatj.github.io/docs/python/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</guid>
+      <description>零、训练 # 1.模型的断点续训练 # 在训练过程中，可能由于某种意</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://TCmatj.github.io/docs/python/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/featured.png" />
+    </item>
+    
+    <item>
+      <title>算法</title>
+      <link>https://TCmatj.github.io/docs/%E5%85%B6%E4%BB%96/%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://TCmatj.github.io/docs/%E5%85%B6%E4%BB%96/%E7%AE%97%E6%B3%95/</guid>
+      <description>Java # 1.堆/优先队列 # Queue&amp;lt;Integer&amp;gt; bigHeap = new PriorityQueue&amp;lt;&amp;gt;((a, b) -&amp;gt; b - a); // 大顶堆 bigHeap.offer(num); //入堆</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://TCmatj.github.io/docs/%E5%85%B6%E4%BB%96/%E7%AE%97%E6%B3%95/featured.png" />
+    </item>
+    
+    <item>
+      <title>状态机</title>
+      <link>https://TCmatj.github.io/docs/%E5%85%B6%E4%BB%96/%E7%8A%B6%E6%80%81%E6%9C%BA/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://TCmatj.github.io/docs/%E5%85%B6%E4%BB%96/%E7%8A%B6%E6%80%81%E6%9C%BA/</guid>
+      <description>基本概念 # 全称是有限状态自动机（Finite-state ma</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://TCmatj.github.io/docs/%E5%85%B6%E4%BB%96/%E7%8A%B6%E6%80%81%E6%9C%BA/featured.png" />
+    </item>
+    
+  </channel>
+</rss>

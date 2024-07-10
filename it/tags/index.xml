@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on My New Hugo Site</title>
+    <link>http://localhost:1313/it/tags/</link>
+    <description>Recent content in Tags on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>it</language>
+    <copyright>© 2024 </copyright>
+    <lastBuildDate>Fri, 14 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/it/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sample</title>
+      <link>http://localhost:1313/it/tags/sample/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/it/tags/sample/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Users</title>
+      <link>http://localhost:1313/it/tags/users/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/it/tags/users/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Accademia</title>
+      <link>http://localhost:1313/it/tags/accademia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/it/tags/accademia/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Autore</title>
+      <link>http://localhost:1313/it/tags/autore/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/it/tags/autore/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Autore Del Tema</title>
+      <link>http://localhost:1313/it/tags/autore-del-tema/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/it/tags/autore-del-tema/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>http://localhost:1313/it/tags/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/it/tags/blog/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Blog Personale</title>
+      <link>http://localhost:1313/it/tags/blog-personale/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/it/tags/blog-personale/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Blog Sulla Tecnologia</title>
+      <link>http://localhost:1313/it/tags/blog-sulla-tecnologia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/it/tags/blog-sulla-tecnologia/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Fotografia Di Bambole</title>
+      <link>http://localhost:1313/it/tags/fotografia-di-bambole/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/it/tags/fotografia-di-bambole/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Giardino Digitale</title>
+      <link>http://localhost:1313/it/tags/giardino-digitale/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/it/tags/giardino-digitale/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Modellatore</title>
+      <link>http://localhost:1313/it/tags/modellatore/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/it/tags/modellatore/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Sito Aziendale</title>
+      <link>http://localhost:1313/it/tags/sito-aziendale/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/it/tags/sito-aziendale/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Sito Del Club Universitario</title>
+      <link>http://localhost:1313/it/tags/sito-del-club-universitario/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/it/tags/sito-del-club-universitario/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Sito Del Progetto</title>
+      <link>http://localhost:1313/it/tags/sito-del-progetto/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/it/tags/sito-del-progetto/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Sito Dell&#39;app</title>
+      <link>http://localhost:1313/it/tags/sito-dellapp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/it/tags/sito-dellapp/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Sito Dell&#39;organizzazione</title>
+      <link>http://localhost:1313/it/tags/sito-dellorganizzazione/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/it/tags/sito-dellorganizzazione/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Sito Di Fumetti</title>
+      <link>http://localhost:1313/it/tags/sito-di-fumetti/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/it/tags/sito-di-fumetti/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Sito Di Giochi</title>
+      <link>http://localhost:1313/it/tags/sito-di-giochi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/it/tags/sito-di-giochi/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Sito Personale</title>
+      <link>http://localhost:1313/it/tags/sito-personale/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/it/tags/sito-personale/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Sito Portfolio</title>
+      <link>http://localhost:1313/it/tags/sito-portfolio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/it/tags/sito-portfolio/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Sviluppatore Di Software</title>
+      <link>http://localhost:1313/it/tags/sviluppatore-di-software/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/it/tags/sviluppatore-di-software/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Sviluppatore Di Videogiochi</title>
+      <link>http://localhost:1313/it/tags/sviluppatore-di-videogiochi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/it/tags/sviluppatore-di-videogiochi/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>
