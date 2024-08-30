@@ -103,7 +103,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "8122"
+    "wordCount": "16129"
   }]
   </script>
 
@@ -599,6 +599,13 @@
           
           <p class="text-sm font-sm" title="">
             算法
+          </p>
+        </a>
+        
+        <a href="/docs/%E5%85%B6%E4%BB%96/%E7%BD%91%E7%BB%9C/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+          
+          <p class="text-sm font-sm" title="">
+            网络
           </p>
         </a>
         
@@ -1174,6 +1181,15 @@
 </li>
 
 <li class="mt-1">
+    <a href="/docs/%E5%85%B6%E4%BB%96/%E7%BD%91%E7%BB%9C/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-sm font-small" title="">
+            网络
+        </p>
+    </a>
+</li>
+
+<li class="mt-1">
     <a href="/docs/%E5%85%B6%E4%BB%96/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
         <p class="text-sm font-small" title="">
@@ -1385,7 +1401,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time><span class="px-2 text-primary-500">&middot;</span><span>8122 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">17 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time><span class="px-2 text-primary-500">&middot;</span><span>16129 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">33 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
   
   
     
@@ -1676,6 +1692,54 @@
       </ul>
     </li>
     <li><a href="#4-事务隔离级别">4. 事务隔离级别</a></li>
+    <li><a href="#tips">tips</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-内存数据对象">1. 内存数据对象</a></li>
+        <li><a href="#2-checkpoint-技术">2. Checkpoint 技术</a></li>
+        <li><a href="#3-主线程工作">3. 主线程工作</a></li>
+        <li><a href="#4关键特性">4.关键特性</a>
+          <ul>
+            <li><a href="#41-插入缓冲">4.1 插入缓冲</a></li>
+            <li><a href="#42-修改缓冲">4.2 修改缓冲</a></li>
+            <li><a href="#43-双写">4.3 双写</a></li>
+            <li><a href="#44-自适应哈希索引">4.4 自适应哈希索引</a></li>
+            <li><a href="#45-异步io">4.5 异步IO</a></li>
+            <li><a href="#46-刷新临接页">4.6 刷新临接页</a></li>
+          </ul>
+        </li>
+        <li><a href="#5-启动关闭和恢复">5. 启动、关闭和恢复</a></li>
+        <li><a href="#6-表">6. 表</a>
+          <ul>
+            <li><a href="#61-逻辑存储结构">6.1 逻辑存储结构</a></li>
+            <li><a href="#62-行记录格式">6.2 行记录格式</a></li>
+            <li><a href="#63-数据页结构">6.3 数据页结构</a></li>
+            <li><a href="#64-约束">6.4 约束</a></li>
+          </ul>
+        </li>
+        <li><a href="#7-索引">7. 索引</a>
+          <ul>
+            <li><a href="#71-mrr优化-56开始">7.1 MRR优化 5.6开始</a></li>
+            <li><a href="#72-icp优化-56开始">7.2 ICP优化 5.6开始</a></li>
+            <li><a href="#73-全文检索">7.3 全文检索</a></li>
+          </ul>
+        </li>
+        <li><a href="#8-锁">8. 锁</a>
+          <ul>
+            <li><a href="#81-一致性非锁定读">8.1 一致性非锁定读</a></li>
+            <li><a href="#82-一致性锁定读">8.2 一致性锁定读</a></li>
+            <li><a href="#83-自增与锁">8.3 自增与锁</a></li>
+            <li><a href="#84-锁算法">8.4 锁算法</a></li>
+            <li><a href="#85-阻塞">8.5 阻塞</a></li>
+            <li><a href="#86-死锁">8.6 死锁</a></li>
+            <li><a href="#87-锁升级没有锁升级">8.7 锁升级「没有锁升级」</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -1752,6 +1816,54 @@
       </ul>
     </li>
     <li><a href="#4-事务隔离级别">4. 事务隔离级别</a></li>
+    <li><a href="#tips">tips</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-内存数据对象">1. 内存数据对象</a></li>
+        <li><a href="#2-checkpoint-技术">2. Checkpoint 技术</a></li>
+        <li><a href="#3-主线程工作">3. 主线程工作</a></li>
+        <li><a href="#4关键特性">4.关键特性</a>
+          <ul>
+            <li><a href="#41-插入缓冲">4.1 插入缓冲</a></li>
+            <li><a href="#42-修改缓冲">4.2 修改缓冲</a></li>
+            <li><a href="#43-双写">4.3 双写</a></li>
+            <li><a href="#44-自适应哈希索引">4.4 自适应哈希索引</a></li>
+            <li><a href="#45-异步io">4.5 异步IO</a></li>
+            <li><a href="#46-刷新临接页">4.6 刷新临接页</a></li>
+          </ul>
+        </li>
+        <li><a href="#5-启动关闭和恢复">5. 启动、关闭和恢复</a></li>
+        <li><a href="#6-表">6. 表</a>
+          <ul>
+            <li><a href="#61-逻辑存储结构">6.1 逻辑存储结构</a></li>
+            <li><a href="#62-行记录格式">6.2 行记录格式</a></li>
+            <li><a href="#63-数据页结构">6.3 数据页结构</a></li>
+            <li><a href="#64-约束">6.4 约束</a></li>
+          </ul>
+        </li>
+        <li><a href="#7-索引">7. 索引</a>
+          <ul>
+            <li><a href="#71-mrr优化-56开始">7.1 MRR优化 5.6开始</a></li>
+            <li><a href="#72-icp优化-56开始">7.2 ICP优化 5.6开始</a></li>
+            <li><a href="#73-全文检索">7.3 全文检索</a></li>
+          </ul>
+        </li>
+        <li><a href="#8-锁">8. 锁</a>
+          <ul>
+            <li><a href="#81-一致性非锁定读">8.1 一致性非锁定读</a></li>
+            <li><a href="#82-一致性锁定读">8.2 一致性锁定读</a></li>
+            <li><a href="#83-自增与锁">8.3 自增与锁</a></li>
+            <li><a href="#84-锁算法">8.4 锁算法</a></li>
+            <li><a href="#85-阻塞">8.5 阻塞</a></li>
+            <li><a href="#86-死锁">8.6 死锁</a></li>
+            <li><a href="#87-锁升级没有锁升级">8.7 锁升级「没有锁升级」</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -2507,6 +2619,18 @@ $$
 </p>
 <p>写入<code>binlog</code>时发生异常也不会有影响，因为<code>MySQL</code>根据<code>redo log</code>日志恢复数据时，发现<code>redo log</code>还处于<code>prepare</code>阶段，并且没有对应<code>binlog</code>日志，就会回滚该事务。</p>
 <p><code>redo log</code>设置<code>commit</code>阶段发生异常，虽然<code>redo log</code>是处于<code>prepare</code>阶段，但是能通过事务<code>id</code>找到对应的<code>binlog</code>日志，所以<code>MySQL</code>认为是完整的，就会提交事务恢复数据。</p>
+<p>例子：</p>
+<blockquote>
+<p>假设当前ID=2的行，字段c的值是0，再假设执行update语句过程中在写完第一个日志后，第二个日志还没有写完期间发生了crash，会出现什么情况呢？</p>
+</blockquote>
+<blockquote>
+<p>先写redo log后写binlog。假设在redo log写完，binlog还没有写完的时候，MySQL进程异常重启。由于我们前面说过的，redo log写完之后，系统即使崩溃，仍然能够把数据恢复回来，所以恢复后这一行c的值是1。
+但是由于binlog没写完就crash了，这时候binlog里面就没有记录这个语句。因此，之后备份日志的时候，存起来的binlog里面就没有这条语句。
+然后你会发现，如果需要用这个binlog来恢复临时库的话，由于这个语句的binlog丢失，这个临时库就会少了这一次更新，恢复出来的这一行c的值就是0，与原库的值不同。</p>
+</blockquote>
+<blockquote>
+<p>先写binlog后写redo log。如果在binlog写完之后crash，由于redo log还没写，崩溃恢复以后这个事务无效，所以这一行c的值是0。但是binlog里面已经记录了“把c从0改成1”这个日志。所以，在之后用binlog来恢复的时候就多了一个事务出来，恢复出来的这一行c的值就是1，与原库的值不同。</p>
+</blockquote>
 
 
 <h3 class="relative group">2.4 undo log 
@@ -2664,7 +2788,51 @@ $$
 <p><strong>1、执行普通 <code>select</code>，此时会以 <code>MVCC</code> 快照读的方式读取数据</strong></p>
 <p>在快照读的情况下，RR 隔离级别只会在事务开启后的第一次查询生成 <code>Read View</code> ，并使用至事务提交。所以在生成 <code>Read View</code> 之后其它事务所做的更新、插入记录版本对当前事务并不可见，实现了可重复读和防止快照读下的 “幻读”</p>
 <p><strong>2、执行 select&hellip;for update/lock in share mode、insert、update、delete 等当前读</strong></p>
-<p>在当前读下，<strong>读取</strong>的都是<strong>最新的数据</strong>，如果其它事务有插入新的记录，并且刚好在当前事务查询范围内，就会产生幻读！<code>InnoDB</code> 使用 <code>Next-key Lock</code> 来防止这种情况。当执行当前读时，会锁定读取到的记录的同时，锁定它们的间隙，防止其它事务在查询范围内插入数据。只要我不让你插入，就不会发生幻读</p>
+<p>在当前读下，<strong>读取</strong>的都是<strong>最新的数据</strong>，如果其它事务有插入新的记录，并且刚好在当前事务查询范围内，就会产生幻读！<code>InnoDB</code> 使用 <code>Next-key Lock</code> 来防止这种情况。当执行当前读时，会锁定读取到的记录的同时，锁定它们的间隙，防止其它事务在查询范围内插入数据。只要我不让你插入，就不会发生幻读
+例子，表 t 中 id = c：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">时刻</th>
+<th style="text-align:center">事务A</th>
+<th style="text-align:center">事务B</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">begin;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">begin;</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">update t set c = c + 1;</td>
+<td style="text-align:center">当前读</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">commit;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">update t set c = 0 where id = c</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">当前读，修改行数为0</td>
+</tr>
+</tbody>
+</table>
+<p>事务 B 不开启事务也可以，也是当前读引发数据变更后，再次当前读数据没对上导致数据更新异常。</p>
 
 
 <h2 class="relative group">4. 事务隔离级别 
@@ -2725,6 +2893,1076 @@ $$
 <li><strong>快照读</strong>：由 MVCC 机制来保证不出现幻读。</li>
 <li><strong>当前读</strong>：使用 Next-Key Lock 进行加锁来保证不出现幻读，Next-Key Lock 是行锁（Record Lock）和间隙锁（Gap Lock）的结合，行锁只能锁住已经存在的行，为了避免插入新行，需要依赖间隙锁。</li>
 </ul>
+
+
+<h2 class="relative group">tips 
+    <div id="tips" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#tips" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<ol>
+<li>删除记录只是标记 B+ 树的节点为可复用，删除页后整个页可以复用</li>
+<li>alter table A engine=InnoDB可以重建表，消除空洞「optimize table A 亦可」</li>
+</ol>
+<ul>
+<li>
+<p>5.5之前，DDL是使用临时表进行修改</p>
+<blockquote>
+<ol>
+<li>按表 A 定义新建临时表 B，对原来的表 A 加 X 锁。</li>
+<li>在表 B 上执行 DDL 操作</li>
+<li>将数据拷贝到新表</li>
+<li>释放 X 锁，删除表 A</li>
+<li>重命名表 B 为表 A</li>
+</ol>
+</blockquote>
+</li>
+<li>
+<p>5.6之后，引入Online DDL优化流程「主要是利用日志进行重放，允许重建时对原表进行DML」：</p>
+<blockquote>
+<ol>
+<li>建立临时文件，扫描表 A 主键的所有数据页</li>
+<li>用数据页中表 A 的记录生成 B+ 树，存储到临时文件</li>
+<li>生成临时文件过程中，对 A 的操作都记录在 row log 中</li>
+<li>生成完后，将日志文件的操作应用到临时文件</li>
+<li>用临时文件替换表 A</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<ol start="3">
+<li>间隙锁在可重复读隔离级别下才有效，读已提交只有行锁
+<ul>
+<li>原则1：加锁的基本单位是next-key lock。希望你还记得，next-key lock是前开后闭区间</li>
+<li>原则2：查找过程中访问到的对象才会加锁</li>
+<li>优化1：索引上的等值查询，给唯一索引加锁的时候，next-key lock退化为行锁</li>
+<li>优化2：索引上的等值查询，向右遍历时且最后一个值不满足等值条件的时候，next-key lock退化为间隙锁</li>
+<li>一个bug：唯一索引上的范围查询会访问到不满足条件的第一个值为止</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">`</span><span class="n">t</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">`</span><span class="k">c</span><span class="o">`</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">`</span><span class="n">d</span><span class="o">`</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">),</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">KEY</span><span class="w"> </span><span class="o">`</span><span class="k">c</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="k">c</span><span class="o">`</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">)</span><span class="w"> </span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="k">values</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">),(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">),(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">),(</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">),(</span><span class="mi">25</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">25</span><span class="p">)</span><span class="w">
+</span></span></span></code></pre></div><table>
+<thead>
+<tr>
+<th style="text-align:center">t</th>
+<th style="text-align:center">事务A</th>
+<th style="text-align:center">事务B</th>
+<th style="text-align:center">事务C</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">begin;update t set d=d+1 where id=7;</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">insert into t values(8, 8, 8);</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">阻塞</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">update t set d=d+1 where id=10;</td>
+<td style="text-align:center">正常</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>唯一索引，访问直到 7 之后的 10。等值查，退化为行锁。向右遍历退化为间隙锁，锁住 (5, 10)。因此事务 B 会被阻塞。事务 C 会被允许执行</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">t</th>
+<th style="text-align:center">事务A</th>
+<th style="text-align:center">事务B</th>
+<th style="text-align:center">事务C</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">begin;select id from t where c=5 lock in share mode;</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">update t set d=d+1 where id=5;</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">正常</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">insert into t values(7, 7, 7);</td>
+<td style="text-align:center">阻塞</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<ul>
+<li>A 会给索引 c = 5上读锁，根据原则1，上 <code>(0, 5]</code></li>
+<li>由于不是唯一索引，需要向右遍历。根据原则2，访问的都需要上锁，上 <code>(5, 10]</code></li>
+<li>根据优化2，等值查询向右遍历，退化为 <code>(5, 10)</code></li>
+<li>根据原则2，这里是覆盖索引不需要回表，不访问主键索引，主键索引上不会添加任何锁。因此事务B可以正常执行，而C会被阻塞
+若是 for update 会认为接下来要更新数据，因此会给主键索引上满足条件的行上行锁</li>
+</ul>
+</blockquote>
+<ul>
+<li>锁是加在索引上的</li>
+</ul>
+<ol start="4">
+<li>
+<p>主备延迟</p>
+<ul>
+<li>备库机器性能比主库性能差</li>
+<li>备库压力大———— 一主多从 or 外部系统提供查询能力</li>
+<li>大事务</li>
+<li>备库并行复制能力</li>
+</ul>
+</li>
+<li>
+<p>join</p>
+<ul>
+<li>若可以使用Index Nested-Loop Join 算法，即可以用上被驱动表上的索引，可以使用</li>
+<li>若使用 Block Nested-Loop Join 算法，尽量不要使用</li>
+<li>使用小表驱动大表「按各自条件过滤之后参与 join 的各个子段的总数据量小的表」</li>
+</ul>
+</li>
+</ol>
+
+
+<h1 class="relative group">Innodb 
+    <div id="innodb" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#innodb" aria-label="锚点">#</a>
+    </span>        
+    
+</h1>
+
+
+<h3 class="relative group">1. 内存数据对象 
+    <div id="1-%E5%86%85%E5%AD%98%E6%95%B0%E6%8D%AE%E5%AF%B9%E8%B1%A1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#1-%E5%86%85%E5%AD%98%E6%95%B0%E6%8D%AE%E5%AF%B9%E8%B1%A1" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ul>
+<li>重做日志缓冲(redo log_buffer)</li>
+<li>缓冲池(innodb_buffer_pool) &ndash;&gt; 数据页、索引页、插入缓冲、锁信息、自适应哈希索引、数据字典信息</li>
+<li>额外内存池</li>
+</ul>
+<p>缓冲池管理算法：LRU，Innodb使用的是优化后的LRU</p>
+<ul>
+<li>新读取的页，放到 LRU 的 midpoint 位置。默认配置下，是5/8位置 (innodb_old_blocks_pct = 37, 37% 差不多3/8)。后面的列表称为 old 列表。</li>
+<li>前面的列表是 new 列表，简单理解为 new 列表的页都是最为活跃的热点数据</li>
+</ul>
+<p>重做日志缓冲刷新到重做日志文件：</p>
+<ul>
+<li>每秒</li>
+<li>每个事务提交</li>
+<li>剩余空间小于 1/2 时</li>
+<li>大小由 innodb_log_buffer_size 控制，默认 8 MB</li>
+</ul>
+
+
+<h3 class="relative group">2. Checkpoint 技术 
+    <div id="2-checkpoint-%E6%8A%80%E6%9C%AF" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#2-checkpoint-%E6%8A%80%E6%9C%AF" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>宕机后，数据库只需要对 Checkpoint 后到重做日志进行恢复</p>
+<ul>
+<li>缩短数据库恢复时间</li>
+<li>缓冲池不够用时，刷新脏页到磁盘</li>
+<li>重做日志不可用时，刷新脏页</li>
+</ul>
+<p>Sharp Checkpoint</p>
+<ul>
+<li>数据库关闭时，将所有脏页刷新回磁盘</li>
+</ul>
+<p>Fuzzy Checkpoint</p>
+<ul>
+<li>主线程检查点每秒或每十秒，异步从脏页列表刷新一定比例的页</li>
+<li>脏页数量太多 innodb_max_dirty_pages_pct 控制占比，默认75%</li>
+<li>Async/Sync Flush Checkpoint 重做日志不可用的情况，需要强制将一些页刷新回。保证重做日志的循环可用</li>
+<li>FLUSH_LRU_LIST Checkpoint 是保证 LRU 列表中需要有一定的空闲页可用。innodb_lru_scan_depth 控制，默认1024</li>
+</ul>
+
+
+<h3 class="relative group">3. 主线程工作 
+    <div id="3-%E4%B8%BB%E7%BA%BF%E7%A8%8B%E5%B7%A5%E4%BD%9C" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#3-%E4%B8%BB%E7%BA%BF%E7%A8%8B%E5%B7%A5%E4%BD%9C" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>if InnoDB is idle:</p>
+<p>每秒：</p>
+<ul>
+<li>日志缓冲刷新到磁盘</li>
+<li>if(当前一秒内 IO 次数 &lt; 5)  &ndash;&gt; 合并插入缓冲 5% * innodb_io_capacity</li>
+<li>if(脏页比例超过配置的最大脏页比例 innodb_max_dirty_pages_pct)  &ndash;&gt;  刷新 innodb_io_capacity 个脏页到磁盘</li>
+<li>if(开启自适应刷新) 通过redo log的生成速度决定最合适的刷新脏页数量</li>
+<li>if(没有用户活动【数据库空闲、关闭】) &ndash;&gt; 切换到 background loop</li>
+</ul>
+<p>else:</p>
+<p>每十秒：</p>
+<ul>
+<li>if(过去十秒磁盘 IO 操作 &lt; 200) &ndash;&gt;  刷新 innodb_io_capacity 个脏页到磁盘</li>
+<li>合并 5% * innodb_io_capacity 个插入缓冲</li>
+<li>将日志缓冲刷新到磁盘</li>
+<li>删除无用的 Undo 页(每次最多innodb_purge_batch_size【默认20页】)</li>
+<li>是否有超过 innodb_max_dirty_pages_pct 比例的脏页 &ndash;&gt; 刷新 innodb_io_capacity 个，否则 10% * innodb_io_capacity 个脏页到磁盘</li>
+</ul>
+<p>background loop：</p>
+<ul>
+<li>删除无用的 Undo 页</li>
+<li>合并 innodb_io_capacity 个插入缓冲</li>
+<li>不空闲则跳回主循环</li>
+<li>不断刷新 innodb_io_capacity 个页直到符合条件</li>
+</ul>
+
+
+<h3 class="relative group">4.关键特性 
+    <div id="4%E5%85%B3%E9%94%AE%E7%89%B9%E6%80%A7" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#4%E5%85%B3%E9%94%AE%E7%89%B9%E6%80%A7" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+
+
+<h4 class="relative group">4.1 插入缓冲 
+    <div id="41-%E6%8F%92%E5%85%A5%E7%BC%93%E5%86%B2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#41-%E6%8F%92%E5%85%A5%E7%BC%93%E5%86%B2" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>对于非唯一的二级索引，会使用插入缓冲来解决离散插入时低效的问题。</p>
+<ul>
+<li>非唯一：插入缓冲时，不可能去判断插入记录的唯一性，这样又有了离散读取的情况</li>
+<li>主键索引：已经是顺序插入了</li>
+</ul>
+<p>SHOW ENGINE INNODB STATUS显示：</p>
+<ul>
+<li>inserts 插入的记录数</li>
+<li>merged recs 合并的插入记录数量</li>
+<li>merges 合并的次数【实际读取页的数量】
+插入缓冲默认最大可以占用 1/2 的缓冲池内存【IBUF_POOL_SIZE_PER_MAX_SIZE控制 1/n】</li>
+</ul>
+
+
+<h4 class="relative group">4.2 修改缓冲 
+    <div id="42-%E4%BF%AE%E6%94%B9%E7%BC%93%E5%86%B2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#42-%E4%BF%AE%E6%94%B9%E7%BC%93%E5%86%B2" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>可以视为插入缓冲的升级，可以对DML操作——INSERT\DELETE\UPDATE都进行缓冲，分别是 Insert Buffer\Delete Buffer\Purge Buffer</p>
+<ul>
+<li>非唯一的辅助索引</li>
+</ul>
+<p>对一条 Update 的操作可能分为两个步骤：</p>
+<ol>
+<li>将记录标记为已删除 ————&gt; Delete Buffer</li>
+<li>真正删除 ————&gt; Purge Buffer</li>
+</ol>
+<p>innodb_change_buffering:</p>
+<ul>
+<li>inserts</li>
+<li>deletes</li>
+<li>purges</li>
+<li>changes &mdash;&gt; 启用 inserts 和 deletes</li>
+<li>all【默认】</li>
+<li>none</li>
+</ul>
+<p>innodb_change_buffer_max_size【控制最大使用的内存，默认25%，表示最多使用 25% 缓冲池内存，最大有效值为50】</p>
+<p><strong>内部实现</strong>：「B+树，非叶节点存放的是查询的键值」</p>
+<p>search key键: space表空间id「4B」 + marker兼容「1B」 + offset页所在偏移量「4B」</p>
+<p>一个辅助索引要插入页(space, offset)时，若页不在缓冲池，则构造一个键，查询 B+ 树，插入叶子节点中</p>
+<p>页字节点：space + marker + offset + metadata「4B」 + 二级索引记录</p>
+<p>metadata:</p>
+<ul>
+<li>IBUF_REC_OFFSET_COUNT   2B  记录进入缓存的顺序</li>
+<li>IBUF_REC_OFFSET_TYPE    1B</li>
+<li>IBUF_REC_OFFSET_FLAGS   1B</li>
+</ul>
+<p><strong>Insert Buffer Bitmap 页</strong>：标记每个辅助索引页的可用空间。每个追踪 16384(16K) 个辅助索引页</p>
+<ul>
+<li>每个辅助索引页占4bit</li>
+<li>IBUF_BITMAP_FREE      2bit  表示可用空间的数量 0-无；1-大于1/32页； 2-大于1/16页； 3-大于1/8页</li>
+<li>IBUF_BITMAP_BUFFERED  1bit  1 表示该辅助索引页有记录被缓存在 B+ 树，用于等待后续的合并操作</li>
+<li>IBUF_BITMAP_IBUF      1bit  1 表示该页为 B+ 树的索引页</li>
+</ul>
+<p><strong>合入真正的索引时机</strong>：</p>
+<ul>
+<li>辅助索引页被读取到缓冲池</li>
+<li>Insert Buffer Bitmap 页追踪到该辅助索引页无可用空间 ————&gt; 插入辅助索引记录时检测到插入记录后可用空间  &lt; 1/32 时会强制进行一次合并</li>
+<li>主线程 ————&gt; 每十秒进行的。随机选择一个插入缓冲中的页，读取该页的space及之后的页进行merge，若merge的表已经被删除，则可丢弃此缓存数据</li>
+</ul>
+
+
+<h4 class="relative group">4.3 双写 
+    <div id="43-%E5%8F%8C%E5%86%99" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#43-%E5%8F%8C%E5%86%99" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>提高数据页的可靠性</p>
+<p>包括两部分：</p>
+<ul>
+<li>内存中的双写缓冲(doublewrite buffer 2MB)</li>
+<li>物理磁盘上共享表空间中连续的 128 页(2个区，2MB) 【用于恢复数据】
+对缓冲池的脏页进行刷新时，不直接写磁盘，先将脏页复制到内存中的双写缓冲，双写缓冲之后分两次，顺序地写入物理磁盘，之后马上调用fsync函数，确保所有数据已经持久化到物理磁盘。由于双写页是连续的，开销不是很大</li>
+</ul>
+
+
+<h4 class="relative group">4.4 自适应哈希索引 
+    <div id="44-%E8%87%AA%E9%80%82%E5%BA%94%E5%93%88%E5%B8%8C%E7%B4%A2%E5%BC%95" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#44-%E8%87%AA%E9%80%82%E5%BA%94%E5%93%88%E5%B8%8C%E7%B4%A2%E5%BC%95" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>Innodb 监控表上各索引页的查询，若观察到建立哈希索引可以带来速度提升，则会建立哈希索引，AHI(Adaptive Hash Index)是通过缓冲池的B+树构造来的，因此建立的速度很快【不需要对整表构建索引】。Innodb 会自动根据访问的频率和模式自动为某些热点页建立哈希索引</p>
+<ul>
+<li>页的访问模式必须是一样的 ————&gt; 对于(a, b)索引，有两个模式，where a=xxx 和 where a=xxx and b =xxx。若交替进行，则不会建立 AHI</li>
+<li>以该模式访问了100次</li>
+<li>页通过该模式访问了 N(页中记录/16) 次</li>
+<li>innodb_adaptive_hash_index 控制禁用或启动此特性</li>
+</ul>
+
+
+<h4 class="relative group">4.5 异步IO 
+    <div id="45-%E5%BC%82%E6%AD%A5io" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#45-%E5%BC%82%E6%AD%A5io" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>AIO：发出一个IO请求后立即发出下一个IO请求，全部请求发送完毕后，等待所有IO对完成</p>
+<ul>
+<li>可以进行IO合并，如需要访问页的(space, page_no)为 (8, 6) (8,7) 会被合并为(8, 6)开始读取 32KB 的页</li>
+<li>innodb_use_native_aio 控制是否启用 Native AIO(内核级别的支持)</li>
+<li>Innodb中，read ahead方式的读取【预读】、脏页的刷新 都是由AIO完成的</li>
+</ul>
+
+
+<h4 class="relative group">4.6 刷新临接页 
+    <div id="46-%E5%88%B7%E6%96%B0%E4%B8%B4%E6%8E%A5%E9%A1%B5" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#46-%E5%88%B7%E6%96%B0%E4%B8%B4%E6%8E%A5%E9%A1%B5" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>刷新脏页时，若同一个区有其他脏页，一起进行刷新</p>
+<ul>
+<li>innodb_flush_neighbors 控制是否启用。对于机械硬盘建议启用，固态硬盘建议关闭</li>
+</ul>
+
+
+<h3 class="relative group">5. 启动、关闭和恢复 
+    <div id="5-%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%AD%E5%92%8C%E6%81%A2%E5%A4%8D" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#5-%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%AD%E5%92%8C%E6%81%A2%E5%A4%8D" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>关闭参数 innodb_fast_shutdown</p>
+<ul>
+<li>0 关闭时完成所有的full purge和merge insert buffer，并将所有的脏页刷新回磁盘。Innodb升级时，必须设为0</li>
+<li>1 默认值，只刷新脏页回磁盘</li>
+<li>2 上述操作都不做，将日志都写入日志文件。这样不会有任何事务的丢失，下次启动时，会进行恢复操作</li>
+</ul>
+<p>恢复参数 innodb_force_recovery</p>
+<ul>
+<li>0 默认值，需要恢复时，进行所有的恢复操作，当不能进行有效的恢复时，如数据页损坏，MySQL数据库可能宕机，将错误写入错误日志</li>
+<li>1 忽略检查到的损坏页</li>
+<li>2 阻止主线程的运行</li>
+<li>3 不进行事务回滚</li>
+<li>4 不进行插入缓冲的合并</li>
+<li>5 不查看 Undo log，将未提交的事务视为已提交</li>
+<li>6 不进行前滚
+设置大于 0 后，不能进行insert、update、delete这些 DML 操作，可select、create、drop操作</li>
+</ul>
+
+
+<h3 class="relative group">6. 表 
+    <div id="6-%E8%A1%A8" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#6-%E8%A1%A8" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ul>
+<li>InnoDB 会选择第一个定义的非空的唯一索引作为主键</li>
+<li>否则自动创建一个 6B 的指针作为主键</li>
+</ul>
+
+
+<h4 class="relative group">6.1 逻辑存储结构 
+    <div id="61-%E9%80%BB%E8%BE%91%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#61-%E9%80%BB%E8%BE%91%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>表空间由段(segment)、区(extent)、页(page)组成</p>
+<p>默认情况下，有一个共享表空间 ibdata1，所有的数据都存放到这个表空间内</p>
+<ul>
+<li>innodb_file_per_table 开启则每张表的数据都可以单独放到一个表空间内。每张表的表空间存放的只是数据、索引、插入缓冲Bitmap页</li>
+<li>回滚信息、插入缓冲索引页、系统事务信息、双写缓冲还是存放在共享表空间内</li>
+</ul>
+<p>段：数据段、索引段、回滚段</p>
+<p>区：连续页组成的空间，在任何情况下每个区的大小都为 1MB【64页】。</p>
+<p>为了保证页中连续性，一般一次从磁盘申请4～5个区。</p>
+<ul>
+<li>启用 innodb_file_per_table 后，创建的表默认大小是 96KB。
+<blockquote>
+<p>每个段开始时，先用 32 个页大小的碎片页来存放数据，使用完后才是 64 连续页的申请</p>
+</blockquote>
+</li>
+</ul>
+<p>页：默认大小 16KB。innodb_page_size可以设置为 4K\8K\16K。类型有：数据页、undo页、系统页、事务数据页、插入缓冲位图页、插入缓冲空闲列表页、未压缩的二进制大对象页、压缩的二进制大对象页</p>
+<p>行：每个页最多存放 16KB/2 - 200 = 7992行记录</p>
+
+
+<h4 class="relative group">6.2 行记录格式 
+    <div id="62-%E8%A1%8C%E8%AE%B0%E5%BD%95%E6%A0%BC%E5%BC%8F" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#62-%E8%A1%8C%E8%AE%B0%E5%BD%95%E6%A0%BC%E5%BC%8F" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>Compact 行记录格式：</p>
+<ul>
+<li>MySQL 5.0引入</li>
+<li>变长字段列表。 ——————逆序放置，若列长度小于 255B，每项占一个字节，否则两个字节</li>
+<li>NULL标志位。最少1B ————记录是否有 NULL，有则用 1 表示。06「0000 0110」表示第2和3列数据为 NULL</li>
+<li>记录头信息。5B ——————是否被删除、是否预先被定义的最小记录、记录含有的记录数、索引堆中该条记录的排序记录、记录的类型「普通/B+树/Infimun/Supremum/保留」、页中下一条记录的相对位置</li>
+<li>RowID。6B ————隐藏的主键</li>
+<li>事务ID。6B</li>
+<li>回滚指针。7B</li>
+<li>列1~n数据（无NULL值）</li>
+</ul>
+<p>Redundant 行记录格式：5.0之前的格式，不做了解</p>
+<p>行溢出时（表字段总长度超过8098时「每个页至少应该可以存放2条数据，否则B+树失去意义」），存放768个前缀字节，后面是偏移量指向行溢出页</p>
+<p>新的记录格式 Barracuda「含Compressed、Dynamic」使用完全行溢出方式。数据页中只存放20个字节的指针，实际的数据都存放到偏移页中。</p>
+<p>对于 Char 类型在多字节字符集类型的存储，被明确视为 VarChar 来存储，对于未能占满的还是填充 0x20。</p>
+
+
+<h4 class="relative group">6.3 数据页结构 
+    <div id="63-%E6%95%B0%E6%8D%AE%E9%A1%B5%E7%BB%93%E6%9E%84" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#63-%E6%95%B0%E6%8D%AE%E9%A1%B5%E7%BB%93%E6%9E%84" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>InnoDB数据页组成部分：
+文件头(38B)、页头(56B)、Infimun 和 Supremum Records、行记录(User Records)、空闲空间、页目录、文件结尾信息(8B)。固定大小的存放了Checksum、所在B+树的层数等信息。</p>
+<p>Infimun 和 Supremum Records 中间夹着【逻辑上，物理上这两个时连续的】行记录数据，分别是比任何主键都小、都大的值</p>
+<p>Free Space 是一个链表结构，一条记录被删除后，此空间会被加入到空闲链表</p>
+<p>Page Directory 存放记录的相对位置，有指向一个个记录槽的指针，一个槽可能包含多条记录</p>
+<p>File Trailer 检测页是否已经完整地写入磁盘</p>
+
+
+<h4 class="relative group">6.4 约束 
+    <div id="64-%E7%BA%A6%E6%9D%9F" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#64-%E7%BA%A6%E6%9D%9F" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>约束是逻辑概念，保证数据的完整性。索引是一个数据结构，有逻辑上概念，也代表物理存错的方式</p>
+<p>约束默认不会报错而是警告「设置SQL模式为STRICT_TRANS_TABLES才会报错」</p>
+<ul>
+<li>主键约束————默认名称PRIMARY</li>
+<li>唯一约束————默认名称为列名</li>
+<li>非空约束————name NOT NULL</li>
+<li>枚举约束、集合约束————sex ENUM(&lsquo;male&rsquo;, &lsquo;female&rsquo;)、set SET</li>
+<li>外键约束————保证参照完整性。MySQL本身不支持，InnoDB完整支持 FOREIGN KEY (parent_id) REFERENCES 父表(id)
+<ul>
+<li>CASCADE 父表删除、更新时，字表也需要同步</li>
+<li>SET NULL 子表设置为NULL</li>
+<li>NO ACTION 抛出错误</li>
+<li>RESTRICT 没有指定 ON DELETE 或 ON UPDATE 时的默认设置，抛出错误「在MySQL中一样」</li>
+</ul>
+</li>
+</ul>
+
+
+<h3 class="relative group">7. 索引 
+    <div id="7-%E7%B4%A2%E5%BC%95" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#7-%E7%B4%A2%E5%BC%95" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ul>
+<li>离散读的数据多时，优化器会选主键索引</li>
+</ul>
+
+
+<h4 class="relative group">7.1 MRR优化 5.6开始 
+    <div id="71-mrr%E4%BC%98%E5%8C%96-56%E5%BC%80%E5%A7%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#71-mrr%E4%BC%98%E5%8C%96-56%E5%BC%80%E5%A7%8B" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>Using MRR;</p>
+<p>Multi-Range Read：目的减少磁盘的随机访问，将随机访问转化为较为顺序的数据访问</p>
+<ul>
+<li>将查询到的辅助索引键值放到一个缓存，缓存的数据是根据辅助索引键值排序的</li>
+<li>将缓存中的键值按 RowId 排序</li>
+<li>根据 RowId 的顺序访问实际的数据文件</li>
+</ul>
+
+
+<h4 class="relative group">7.2 ICP优化 5.6开始 
+    <div id="72-icp%E4%BC%98%E5%8C%96-56%E5%BC%80%E5%A7%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#72-icp%E4%BC%98%E5%8C%96-56%E5%BC%80%E5%A7%8B" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>Using index condition;</p>
+<p>Index Condition Pushdown：取出索引的同时，判断是否可以进行 WHERE 条件的过滤，也就是将 WHERE 条件部分过滤放到了存储引擎层。某些查询下，可以大大减少上层 SQL 层对记录的索取。</p>
+<p>假设有一个表 employees，包含 id、name 和 salary 列，并且在 salary 列上有索引</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-SQL" data-lang="SQL"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">WHERE</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">50000</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div><p>在没有索引下推的情况下，数据库将首先访问所有 employees 表的行，并在访问每一行后检查 salary 是否大于 50000。</p>
+<p>而在使用索引下推的情况下，数据库会使用 salary 列的索引来快速找到所有 salary 大于 50000 的记录。只有符合条件的行才会被读取，显著减少了需要访问的行数</p>
+
+
+<h4 class="relative group">7.3 全文检索 
+    <div id="73-%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#73-%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>倒排索引两种形式：</p>
+<ul>
+<li>inverted file index ： {单词, 单词所在文档ID}</li>
+<li>full inverted index ： {单词, (单词所在文档ID, 文档中具体位置)}
+InnoDB 1.2.x 开始支持倒排索引，是第二种形式</li>
+</ul>
+
+
+<h3 class="relative group">8. 锁 
+    <div id="8-%E9%94%81" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#8-%E9%94%81" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>InnoDB 行级锁：</p>
+<ul>
+<li>共享锁 S Lock 读锁</li>
+<li>拍他锁 X Lock 写锁</li>
+<li>意向锁 I Lock 表级别锁</li>
+</ul>
+<p>锁兼容性「下面的锁都是表级别锁，意向锁不和记录锁冲突」：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">IS</th>
+<th style="text-align:center">IX</th>
+<th style="text-align:center">S</th>
+<th style="text-align:center">X</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">IS</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">❌</td>
+</tr>
+<tr>
+<td style="text-align:center">IX</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">❌</td>
+</tr>
+<tr>
+<td style="text-align:center">S</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">❌</td>
+</tr>
+<tr>
+<td style="text-align:center">X</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">❌</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SHOW</span><span class="w"> </span><span class="n">ENGINE</span><span class="w"> </span><span class="n">INNODB</span><span class="w"> </span><span class="n">STATUS</span><span class="p">;</span><span class="w"> </span><span class="c1">-- 也可以查看当前锁请求的信息
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- 5.x 版本
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">information_schema</span><span class="p">.</span><span class="n">innodb_lock_waits</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">information_schema</span><span class="p">.</span><span class="n">innodb_locks</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">-- 8.0 版本
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">performance_schema</span><span class="p">.</span><span class="n">data_locks</span><span class="err">\</span><span class="k">G</span><span class="p">;</span><span class="w"> </span><span class="c1">-- 查看锁信息
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">performance_schema</span><span class="p">.</span><span class="n">data_lock_waits</span><span class="err">\</span><span class="k">G</span><span class="p">;</span><span class="w"> </span><span class="c1">-- 查看等待锁
+</span></span></span></code></pre></div>
+
+<h4 class="relative group">8.1 一致性非锁定读 
+    <div id="81-%E4%B8%80%E8%87%B4%E6%80%A7%E9%9D%9E%E9%94%81%E5%AE%9A%E8%AF%BB" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#81-%E4%B8%80%E8%87%B4%E6%80%A7%E9%9D%9E%E9%94%81%E5%AE%9A%E8%AF%BB" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>MVCC 读取被锁定的数据时，不会等待行上锁的释放，而是读取行的一个快照数据</p>
+<ul>
+<li>在读已提交级别下，总是读取被锁定行的最新一份快照，下面的案例中，会话A从7开始会读取到不到数据。</li>
+<li>在可重复读级别下，总时读取事务开始时的行数据版本，下面的案例中，始终会读取到1的数据</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">时间</th>
+<th style="text-align:center">会话A</th>
+<th style="text-align:center">会话B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">BEGIN;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">SELECT * FROM user WHERE id = 1;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">BEGIN;</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">UPDATE user SET id = 3 WHERE id = 1;</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">SELECT * FROM user WHERE id = 1;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">COMMIT;</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">SELECT * FROM user WHERE id = 1;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">COMMIT;</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+
+
+<h4 class="relative group">8.2 一致性锁定读 
+    <div id="82-%E4%B8%80%E8%87%B4%E6%80%A7%E9%94%81%E5%AE%9A%E8%AF%BB" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#82-%E4%B8%80%E8%87%B4%E6%80%A7%E9%94%81%E5%AE%9A%E8%AF%BB" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>某些情况下，用户需要显式地对数据库读取操作加锁保证数据逻辑的一致性。</p>
+<ul>
+<li>SELECT &hellip; FOR UPDATE           对读取的行加 X 锁</li>
+<li>SELECt &hellip; LOCK IN SHARE MODE   对读取的行加 S 锁</li>
+</ul>
+<p>必须在一个事务中，事务提交时，锁会被释放，使用上面的语句务必加上<code>BEGIN</code>\<code>START TRANSACTION</code>\<code>SET AUTOCOMM = 0</code>。</p>
+
+
+<h4 class="relative group">8.3 自增与锁 
+    <div id="83-%E8%87%AA%E5%A2%9E%E4%B8%8E%E9%94%81" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#83-%E8%87%AA%E5%A2%9E%E4%B8%8E%E9%94%81" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>当对含有自增长的计数器的表插入时，计数器会被初始化，执行如下语句来得到计数器的值：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="k">max</span><span class="p">(</span><span class="n">auto_inc_col</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="k">update</span><span class="p">;</span><span class="w"> </span><span class="c1">-- 加1赋予自增列「AUTO-INC Locking」
+</span></span></span></code></pre></div><p>这种锁是一种特殊的表锁，不是在一个事务完成后释放，而是在完成SQL后立即释放。这样会影响一个事务中大数据量插入的性能。5.1.22 开始，提供一种轻量级互斥量的自增实现机制。</p>
+<p>插入类型：</p>
+<ol>
+<li>insert-like    所有的插入语句                  INSERT\REPLACE\INSERT&hellip;SELECT\REPLACE&hellip;SELECT\LOAD DATA</li>
+<li>simple inserts 能在插入前就确定插入行数的语句    INSERT\REPLACE「不包括 INSERT &hellip; ON DUPLICATE KEY UPDATE」</li>
+<li>bulk inserts   插入前不能确定插入行树的语句      INSERT&hellip;SELECT\REPLACE&hellip;SELECT\LOAD DATA</li>
+<li>mixed-mode inserts 插入有一部分是自增，一部分是确定的；也可以指 INSERT &hellip; ON DUPLICATE KEY UPDATE 此类 SQL</li>
+</ol>
+<p>innodb_autoinc_lock_mode 控制自增长模式，默认 1</p>
+<ul>
+<li>0   表锁的 AUTO-INC Locking 方式</li>
+<li>1   对 simple 会使用互斥量，对 bulk 使用 AUTO-INC Locking。若不考虑回滚操作，增长还是连续的</li>
+<li>2   对所有 insert-like 都是通过互斥量。并发插入时，自增的值可能不是连续的。语句基础复制「记录执行的SQL，在从数据库执行这些SQL」下，会出问题。使用此模式务必使用 row 格式复制</li>
+</ul>
+<p>自增列必须是索引，且必须是索引的第一列，否则抛出异常。</p>
+
+
+<h4 class="relative group">8.4 锁算法 
+    <div id="84-%E9%94%81%E7%AE%97%E6%B3%95" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#84-%E9%94%81%E7%AE%97%E6%B3%95" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<ul>
+<li>记录锁 Record Lock    锁住记录</li>
+<li>间隙锁 Gap Lock       锁住一个范围，不含记录本身</li>
+<li>邻间锁 Next-Key Lock  锁住相邻的索引值左开右闭区间。列是唯一索引情况下，会降级为记录锁。InnoDB 会对辅助索引的下一个键值加间隙锁「防止幻读」</li>
+</ul>
+<p>可以使用邻间锁机制在应用层实现唯一性检查：select * from table where col = xxx lock in share mode;「加锁防止其他事务插入」 即使查询的值不在，锁定的也是一个范围，如果没有返回任何值，新插入的值就是唯一的。</p>
+<p>问题：</p>
+<ol>
+<li>脏读       读未提交时，可以读取到未被提交事务更新的数据，从节点不需要特别精确返回值时可以设置为此级别</li>
+<li>幻读       不可重复读，读取到了「事务开始之后其他事务」已经提交的数据。InnoDB 用邻间锁避免不可重复读</li>
+<li>丢失更新    一个事务的更新会被另一个事务的更新覆盖。任何隔离级别下都不会发生。因为都会给行记录加锁。</li>
+<li>逻辑意义上的数据丢失</li>
+</ol>
+<p>假设现在两个事务，一个事务花了 4 元，一个事务花了 50 元，这时，由于提交事务的时机不同，先提交的事务修改被覆盖掉：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">时间</th>
+<th style="text-align:center">会话A</th>
+<th style="text-align:center">会话B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">BEGIN;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">SELECT * FROM user WHERE id = 1;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">BEGIN;</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">SELECT * FROM user WHERE id = 1;</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">UPDATE user SET money = a - 4 WHERE id = 1;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">UPDATE user SET money = a - 50 WHERE id = 1;</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">COMMIT;</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">COMMIT;</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<p>要避免丢失更新，需要让事务在这种情况下的操作变为串行化：给上面两个 select 都加上排他锁「FOR UPDATE」</p>
+
+
+<h4 class="relative group">8.5 阻塞 
+    <div id="85-%E9%98%BB%E5%A1%9E" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#85-%E9%98%BB%E5%A1%9E" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<ul>
+<li>innodb_lock_wait_timeout 控制等待时间，默认 50 秒</li>
+<li>innodb_rollback_on_timeout 是否在超时时进行回滚，<strong>默认 OFF</strong>，不会回滚大部分的错误异常，但是死锁除外</li>
+</ul>
+
+
+<h4 class="relative group">8.6 死锁 
+    <div id="86-%E6%AD%BB%E9%94%81" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#86-%E6%AD%BB%E9%94%81" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>使用等待图检测死锁。wait-for graph「图中有回路则存在死锁」：</p>
+<ul>
+<li>锁信息链表</li>
+<li>事务等待链表
+InnoDB 1.2 之前，都是采用递归实现，1.2 开始，优化为非递归实现
+
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /img/MySQL-8_hu1bdea17d62de5cd4080742c9cb65920d_105643_330x0_resize_q75_box.jpeg 330w,
+        /img/MySQL-8_hu1bdea17d62de5cd4080742c9cb65920d_105643_660x0_resize_q75_box.jpeg 660w,
+        /img/MySQL-8_hu1bdea17d62de5cd4080742c9cb65920d_105643_1024x0_resize_q75_box.jpeg 1024w,
+        /img/MySQL-8_hu1bdea17d62de5cd4080742c9cb65920d_105643_1320x0_resize_q75_box.jpeg 2x"
+        src="/img/MySQL-8_hu1bdea17d62de5cd4080742c9cb65920d_105643_660x0_resize_q75_box.jpeg"
+        alt=""
+      />
+      
+    </figure>
+
+死锁的示例1：一个事务先获取 A 的锁，再获取 B 的锁；另一个事务反之</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">时间</th>
+<th style="text-align:center">会话A</th>
+<th style="text-align:center">会话B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">BEGIN;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">SELECT * FROM user WHERE id = 1 FOR UPDATE;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">BEGIN;</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">SELECT * FROM user WHERE id = 2 FOR UPDATE;</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">SELECT * FROM user WHERE id = 2 FOR UPDATE;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">SELECT * FROM user WHERE id = 1 FOR UPDATE;</td>
+</tr>
+</tbody>
+</table>
+<p>之后会话 B 会抛出死锁异常，并进行回滚，A 获取资源。</p>
+<p>死锁示例2: 事务 A 持有待插入的下一个记录的 X 锁，但是等待队列中存在一个 S 锁请求</p>
+<p>主键 id，表中有 1 2 4 5</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">时间</th>
+<th style="text-align:center">会话A</th>
+<th style="text-align:center">会话B</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">BEGIN;</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">BEGIN;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">SELECT * FROM user WHERE id = 4 FOR UPDATE;</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">获取记录 4 X锁</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">SELECT * FROM user WHERE id &lt;= 4 LOCK IN SHARE MODE;</td>
+<td style="text-align:center">获取 1, 2 等待 4 S锁</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">INSERT INTO user VALUES(3);</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">获得锁</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<p>若时间 5 插入成功，则 B 还需要获取 3 的锁，这里选择了死锁，回滚 undo log 大的事务</p>
+
+
+<h4 class="relative group">8.7 锁升级「没有锁升级」 
+    <div id="87-%E9%94%81%E5%8D%87%E7%BA%A7%E6%B2%A1%E6%9C%89%E9%94%81%E5%8D%87%E7%BA%A7" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#87-%E9%94%81%E5%8D%87%E7%BA%A7%E6%B2%A1%E6%9C%89%E9%94%81%E5%8D%87%E7%BA%A7" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>InnoDB 不是根据每个记录来产生行锁的，而是根据每个事务访问的每个页对锁进行管理，采用的是位图的方式。因此不管一个事务锁住页的一个记录还是多个记录，开销都是一致的。</p>
 
         </div>
         

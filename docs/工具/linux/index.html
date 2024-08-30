@@ -106,7 +106,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "3593"
+    "wordCount": "3645"
   }]
   </script>
 
@@ -602,6 +602,13 @@
           
           <p class="text-sm font-sm" title="">
             算法
+          </p>
+        </a>
+        
+        <a href="/docs/%E5%85%B6%E4%BB%96/%E7%BD%91%E7%BB%9C/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+          
+          <p class="text-sm font-sm" title="">
+            网络
           </p>
         </a>
         
@@ -1177,6 +1184,15 @@
 </li>
 
 <li class="mt-1">
+    <a href="/docs/%E5%85%B6%E4%BB%96/%E7%BD%91%E7%BB%9C/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-sm font-small" title="">
+            网络
+        </p>
+    </a>
+</li>
+
+<li class="mt-1">
     <a href="/docs/%E5%85%B6%E4%BB%96/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
         <p class="text-sm font-small" title="">
@@ -1388,7 +1404,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time><span class="px-2 text-primary-500">&middot;</span><span>3593 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">8 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time><span class="px-2 text-primary-500">&middot;</span><span>3645 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">8 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
   
   
     
@@ -2091,6 +2107,7 @@ sudo python /home/pi/sample.py
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">awk <span class="o">[</span>参数<span class="o">]</span> <span class="o">[</span>处理内容<span class="o">]</span> <span class="o">[</span>操作对象<span class="o">]</span>
 </span></span><span class="line"><span class="cl">查看修改代码行数：git log --author<span class="o">=</span><span class="s2">&#34;i_matijun&#34;</span> --oneline --shortstat <span class="p">|</span> grep <span class="s2">&#34;files changed&#34;</span> <span class="p">|</span> awk <span class="s1">&#39;BEGIN {plus=0; minus=0} {plus+=$4; minus+=$6} END {print &#34;增加行数：&#34; plus &#34;   减少行数：&#34; minus}&#39;</span>
 </span></span><span class="line"><span class="cl">查询每个人提交次数：git shortlog -s -n
+</span></span><span class="line"><span class="cl">git log --author<span class="o">=</span><span class="s2">&#34;i_matijun&#34;</span> --pretty<span class="o">=</span>tformat: --numstat <span class="p">|</span> awk <span class="s1">&#39;{add += $1; subs += $2; loc += $1 - $2} END {printf &#34;添加行数: %s, 删除行数: %s，总行数: %s\n&#34;, add, subs, loc}&#39;</span><span class="p">;</span>git shortlog --all --numbered --summary --no-merges
 </span></span></code></pre></div><p>内建变量：</p>
 <ul>
 <li>

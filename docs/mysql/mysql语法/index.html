@@ -103,7 +103,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "3842"
+    "wordCount": "3836"
   }]
   </script>
 
@@ -599,6 +599,13 @@
           
           <p class="text-sm font-sm" title="">
             算法
+          </p>
+        </a>
+        
+        <a href="/docs/%E5%85%B6%E4%BB%96/%E7%BD%91%E7%BB%9C/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+          
+          <p class="text-sm font-sm" title="">
+            网络
           </p>
         </a>
         
@@ -1174,6 +1181,15 @@
 </li>
 
 <li class="mt-1">
+    <a href="/docs/%E5%85%B6%E4%BB%96/%E7%BD%91%E7%BB%9C/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-sm font-small" title="">
+            网络
+        </p>
+    </a>
+</li>
+
+<li class="mt-1">
     <a href="/docs/%E5%85%B6%E4%BB%96/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
         <p class="text-sm font-small" title="">
@@ -1385,7 +1401,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time><span class="px-2 text-primary-500">&middot;</span><span>3842 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">8 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time><span class="px-2 text-primary-500">&middot;</span><span>3836 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">8 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
   
   
     
@@ -1959,13 +1975,15 @@
 <li><code>desc 表名; </code>     查询表结构</li>
 <li><code>show create table 表名;</code> 查询建表语句</li>
 </ol>
-<p>修改表格：
-10. <code>alter table 表名 add 字段名 类型(长度) [comment 注释] [约束];</code> 添加字段
-11. <code>alter table 表名 modify 字段名 新数据类型(长度);</code> 修改字段类型
-12. <code>alter table 表名 change 旧字段名 新字段名 类型(长度) [comment 注释] [约束];</code> 修改字段名和字段类型
-13. <code>alter table 表名 drop column 字段名;</code> 删除字段
-14. <code>rename table 表名 to 新表名;</code> 修改表名
-15. <code>drop table [if exists] 表名</code> 删除表</p>
+<p>修改表格：</p>
+<ol start="10">
+<li><code>alter table 表名 add 字段名 类型(长度) [comment 注释] [约束];</code> 添加字段</li>
+<li><code>alter table 表名 modify 字段名 新数据类型(长度);</code> 修改字段类型</li>
+<li><code>alter table 表名 change 旧字段名 新字段名 类型(长度) [comment 注释] [约束];</code> 修改字段名和字段类型</li>
+<li><code>alter table 表名 drop column 字段名;</code> 删除字段</li>
+<li><code>rename table 表名 to 新表名;</code> 修改表名</li>
+<li><code>drop table [if exists] 表名</code> 删除表</li>
+</ol>
 
 
 <h3 class="relative group">2.2 DML 

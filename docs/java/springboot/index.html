@@ -103,7 +103,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "13259"
+    "wordCount": "14194"
   }]
   </script>
 
@@ -599,6 +599,13 @@
           
           <p class="text-sm font-sm" title="">
             算法
+          </p>
+        </a>
+        
+        <a href="/docs/%E5%85%B6%E4%BB%96/%E7%BD%91%E7%BB%9C/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+          
+          <p class="text-sm font-sm" title="">
+            网络
           </p>
         </a>
         
@@ -1174,6 +1181,15 @@
 </li>
 
 <li class="mt-1">
+    <a href="/docs/%E5%85%B6%E4%BB%96/%E7%BD%91%E7%BB%9C/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-sm font-small" title="">
+            网络
+        </p>
+    </a>
+</li>
+
+<li class="mt-1">
     <a href="/docs/%E5%85%B6%E4%BB%96/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
         <p class="text-sm font-small" title="">
@@ -1385,7 +1401,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time><span class="px-2 text-primary-500">&middot;</span><span>13259 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">27 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time><span class="px-2 text-primary-500">&middot;</span><span>14194 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">29 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
   
   
     
@@ -1688,6 +1704,9 @@
     <li><a href="#8-resource-注入静态变量导致空指针异常">8. @Resource 注入静态变量导致空指针异常</a></li>
     <li><a href="#9-spi机制">9. SPI机制</a></li>
     <li><a href="#10-事件机制">10. 事件机制</a></li>
+    <li><a href="#11-bean的生命周期">11. bean的生命周期</a></li>
+    <li><a href="#12三级缓存解决循环依赖">12.三级缓存解决循环依赖</a></li>
+    <li><a href="#13springmvc执行流程">13.SpringMVC执行流程</a></li>
   </ul>
 </nav>
   </div>
@@ -1776,6 +1795,9 @@
     <li><a href="#8-resource-注入静态变量导致空指针异常">8. @Resource 注入静态变量导致空指针异常</a></li>
     <li><a href="#9-spi机制">9. SPI机制</a></li>
     <li><a href="#10-事件机制">10. 事件机制</a></li>
+    <li><a href="#11-bean的生命周期">11. bean的生命周期</a></li>
+    <li><a href="#12三级缓存解决循环依赖">12.三级缓存解决循环依赖</a></li>
+    <li><a href="#13springmvc执行流程">13.SpringMVC执行流程</a></li>
   </ul>
 </nav>
   </div>
@@ -2956,6 +2978,10 @@ hobby java</p>
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
 </span></span></span></code></pre></div></li>
 </ol>
+<blockquote>
+<p>在SpringBoot项目引导类上有一个注解@SpringBootApplication，这个注解是三个注解的封装：@SpringBootConfiguration@EnableAutoConfiguration@ComponentSan</p>
+<p>其中@EnableAutoConfiguration是自动化配置的核心注解。通过@Import注解导入对应的配置选择器。内部是读取了项目和项目引用的Jar包的classpath路径下META-INF/spring.factories文件中所配置的类的全类名，在这些配置类中所定义的Bean会根据条件注解所指定的条件来决定是否需要将其注入到Spring容器中</p>
+</blockquote>
 
 
 <h2 class="relative group">3. 动态代理 
@@ -3783,6 +3809,66 @@ hobby java</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
 </span></span></span></code></pre></div>
+
+<h2 class="relative group">11. bean的生命周期 
+    <div id="11-bean%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#11-bean%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<ol>
+<li>通过BeanDefinition获取bean的定义信息</li>
+<li>调用构造函数实例化bean</li>
+<li>bean的依赖注入</li>
+<li>处理Aware接口（BeanNameAware、BeanFactoryAware、ApplicationContextAware）</li>
+<li>Bean的后置处理器BeanPostProcessor-前置</li>
+<li>初始化方法（InitalizingBean、自定义初始化PostConstruct方法）</li>
+<li>Bean的后置处理器BeanPostProcessor-后置</li>
+<li>使用、销毁</li>
+</ol>
+
+
+<h2 class="relative group">12.三级缓存解决循环依赖 
+    <div id="12%E4%B8%89%E7%BA%A7%E7%BC%93%E5%AD%98%E8%A7%A3%E5%86%B3%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#12%E4%B8%89%E7%BA%A7%E7%BC%93%E5%AD%98%E8%A7%A3%E5%86%B3%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<ul>
+<li>一级缓存：单例池，缓存已经初始化完成的bean对象</li>
+<li>二级缓存：缓存早期的bean对象（只走完构造函数）</li>
+<li>三级缓存：缓存对象工厂，用于创建某个对象。解决二级缓存无法生成代理对象的问题</li>
+<li>无法解决构造函数注入的循环依赖：使用Lazy注解</li>
+</ul>
+
+
+<h2 class="relative group">13.SpringMVC执行流程 
+    <div id="13springmvc%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#13springmvc%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<ol>
+<li>用户发起请求到前端控制器DispatcherSerlet</li>
+<li>DispatcherServlet调用处理器映射器HandlerMapping</li>
+<li>HandlerMapping找到具体的处理器，生成处理器对象及处理器拦截器，返回给DispatcherServlet</li>
+<li>DispatcherServlet调用处理器适配器HandlerAdapter</li>
+<li>HandlerAdapter调用具体的处理器Handler/Controller</li>
+<li>方法上添加了ResponseBody注解（通过HttpMessageConverter返回结果转换为JSON响应）</li>
+</ol>
+
         </div>
         
         
